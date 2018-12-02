@@ -41,10 +41,12 @@ public class LoginPage extends TestBase {
 		return crmLogo.isDisplayed();
 	}
 	
-	public void login(String un, String pwd) {
+	public HomePage login(String un, String pwd) {
 		username.sendKeys(un);
 		password.sendKeys(pwd);
-		loginBtn.click();
+		loginBtn.submit();
+		
+		return new HomePage();
 	}
 
 }

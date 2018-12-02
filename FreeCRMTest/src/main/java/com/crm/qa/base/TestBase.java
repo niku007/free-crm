@@ -20,7 +20,7 @@ public class TestBase {
 	try{
 		prop = new Properties();
 		
-		FileInputStream ip = new FileInputStream(System.getProperty("/home/nikunja/projects/free-crm/FreeCRMTest/src/main/java/com/crm/qa/config/config.properties"));
+		FileInputStream ip = new FileInputStream("/home/nikunja/projects/free-crm/FreeCRMTest/src/main/java/com/crm/qa/config/config.properties");
 		
 		prop.load(ip);
 		
@@ -48,7 +48,14 @@ public class TestBase {
 		
 		driver.get(prop.getProperty("url"));
 	}
-			
+	
+/*	public static void main(String args[]) {
+		
+		
+		TestBase tb = new TestBase();
+		System.out.println(prop.getProperty("url"));
+		
+	}*/
 }
 
 
